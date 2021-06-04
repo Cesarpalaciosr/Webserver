@@ -1,3 +1,4 @@
+//Permite definir las rutas del servidor
 const express = require('express');
 const router = express.Router();
 
@@ -9,6 +10,9 @@ router.get('/', (req, res) =>{
 });
 */
 router.get('/', indexController.index);
+router.get('/users', (req, res) =>{
+    res.send('users');
+});
 
 
 module.exports = router;
